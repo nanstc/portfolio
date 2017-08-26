@@ -1,23 +1,59 @@
 .App {
-  text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.Splash-img {
+  display: flex; 
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background-color: #42b6f4;
+  height: 100vh;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.Quote {
+  font-size: 250%;
+  padding: 7%;
+  align-self: center;
 }
 
+.Navbar {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #222;
+  width: 100%;
+  margin-top: auto;
+  overflow: auto;
+  position: fixed;
+}
+
+.Category {
+  flex-direction: row;
+  color: white;
+  padding-left: 7%;
+  margin: 12px;
+  font-size: 26px;
+}
+.Sub {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 20vh;
+}
+.My-story {
+  order: 1; 
+  flex-grow: 1; 
+}
+
+.content{
+  height: 800px; /*temporary test for banner float*/
+}
+
+.Work {
+  order:1; 
+  flex-grow:8;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
