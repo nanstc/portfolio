@@ -4,6 +4,7 @@ import Scroll from 'react-scroll';
 
 var Link = Scroll.Link;
 var scroller = Scroll.scroller;
+var Element = Scroll.Element;
 
 class App extends Component {
   // common function to scroll to element passed in
@@ -23,24 +24,26 @@ class App extends Component {
       <div className="App">
         <div className="Splash-img">
           <div className="Navbar">
-              <div onClick={()=> this.scrollTo('MyStory')} className= "Category" to="MySotry">
+              <Link className="Category" activeClass="active" to="MyStory" spy={true} smooth={true} duration={400}>
                 My Story
-              </div>
-              <div className="Category" to="Work">
-              Work
-              </div>
+              </Link>
+              <Link className="Category" activeClass="active" to="Work" spy={true} smooth={true} duration={400}>
+                Work
+              </Link>
           </div>
           <h2 className="Quote">"What are you waiting for?"</h2>
         </div>
 
-        <div name="MyStory" className="content">
-            <div className = "Sub">
-              Software Engineer | Programming x Ecology | Dream Big | Doer | Birder
-            </div>
-            Just testing out some ideas here
+        <div className="content">
+          <Element name="MyStory" className = "Sub">
+            Software Engineer | Programming x Ecology | Dream Big | Doer | Birder
+          </Element>
+          TODO: put down things I value and work experience
         </div>
-        <div name="Work" className="content">
-            Work will be placed here
+        <div className="content">
+           <Element name="Work" className = "Sub">
+             Projects
+           </Element>
         </div>
     </div>
     );

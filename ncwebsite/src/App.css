@@ -41,6 +41,8 @@
   font-weight: 500;
   line-height: 20vh;
 }
+
+
 .My-story {
   order: 1; 
   flex-grow: 1; 
@@ -48,6 +50,7 @@
 
 .content{
   height: 800px; /*temporary test for banner float*/
+  padding-left: 2%
 }
 
 .Work {
