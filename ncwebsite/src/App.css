@@ -49,13 +49,24 @@
 }
 
 .content{
-  height: 800px; /*temporary test for banner float*/
+  height: 100vh; /*temporary test for banner float*/
   padding-left: 2%
 }
 
 .Work {
   order:1; 
   flex-grow:8;
+}
+
+.Text {
+  margin: auto;
+  font-size: 18px; 
+  font-weight: 500;
+  line-height: 5vh;
+  padding-right: 10%;
+  padding-bottom: 4vh;
+  width: 75%;
+  text-align: justify;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
