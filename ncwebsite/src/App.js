@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
-import { Document, Page } from 'react-pdf/build/entry.webpack';
+//import { Document, Page } from 'react-pdf/build/entry.webpack';
 //import ReactPDF from 'react-pdf';
-import Scroll from 'react-scroll';
-import Modal from 'react-modal';
-
+//import Modal from 'react-modal';
+import Scroll from  'react-scroll';
+import './App.css';
+import cc from      './images/coastcapital.png';
+import hackbd from   './images/hackBD.png';
+import instrail from './images/instrail.png';
+import linkedin from './images/ln.png';
+import github from   './images/github.png';
+import snowshoe from './images/p_snowshoeing.jpg';
+import hiking from './images/p_hiking.jpg';
+import withbird from './images/p_withbird.jpg';
 var Link = Scroll.Link;
 var scroller = Scroll.scroller;
 var Element = Scroll.Element;
@@ -43,52 +50,84 @@ class App extends Component {
     console.log("clicked on modal?", this.state.modalIsOpen);
   }
   render() {
-    const {file} = this.state
+    //const {file} = this.state
     return (
       <div className="App">
-        <div className="Splash-img">
-          <div className="Navbar">
+        <div className="Splash-img-background">
+          <div className="Splash-img">
+            <div className="Navbar">
               <Link className="Category" activeClass="active" to="MyStory" spy={true} smooth={true} duration={400}>
                 My Story
               </Link>
-              <Link className="Category" activeClass="active" to="Work" spy={true} smooth={true} duration={400}>
+              <Link className="Category" id="divider" activeClass="active" to="Work" spy={true} smooth={true} duration={400}>
                 Work
               </Link>
-          </div>
-          <h2 className="Quote">"What are you waiting for?"</h2>
+              <a href="https://www.linkedin.com/in/nancystchen/" className="icon">
+                <img src={linkedin} alt="linkedin" className="Category"/>
+              </a>
+              <a href="https://github.com/nanstc" className="icon">
+                <img src={github} alt="github" className="Category"/>
+              </a>
+            </div>
+            <h2 className="Quote">"What are you waiting for?"</h2>
+           </div>
         </div>
 
         <div className="content">
           <Element name="MyStory" className = "Sub">
-            | Vancouver, BC | 4th Year CS Student @ UBC | Programming x Ecology | Dream Big | Doer | Birder
+            | Vancouver, BC | 4th Year CS Student @ UBC | <font color="#4CAF50">Programming x Ecology</font> | Dream Big | Doer | Birder
           </Element>
             <p className = "Text">
-                Hello and welcome! A couple of things you should know about me straight-up: I love birds, challenging work, teaching, good jokes, and the outdoors. To me software engineering is more than about making flashy, beautiful solutions for people to pay and enjoy. It is a powerful mean to deliver help to those who are in need the most. </p>
+                Hello and welcome! A couple of things you should know about me straight-up: I love birds, challenging work, teaching, good jokes, and the outdoors. To me software engineering is more than making flashy, beautiful solutions for money; I look at it as a  powerful mean to help those that are the most in need. </p>
             <p className = "Text">
-                One of my biggest dreams is to develop software for providing better education worldwide. I am also very intersted in developing software for natural conservation, and have tried a few ideas to integrate the outdoor lifestyle into softwares. </p>
-            <a href="Resume" className ="Text" onClick={this.openModal}> Check out my resume here. </a>
-            <Modal
-                isOpen={this.state.modalIsOpen}
-                onAfterOpen={this.afterOpenModal}
-                onRequestClose={this.closeModal}
-                shouldCloseOnOverlayClick={true}
-            >
-            <Document
-                file={file} >
-                <Page />
-            </Document>
-           </Modal>
+                One of my biggest dreams is to <font color="#4CAF50">develop software for better education worldwide</font>. I would also love to <font color="#4CAF50">help out natural conservation via coding</font>. In the vast realm of computer science I seem to gravitate towards functional programming, systems, algorithms, and (surprisingly!) UX analysis. </p>
+
+            <div id="content-pimg-holder" className="Text">
+                    <img src={withbird} alt="Iona Island WildResearch Banding Station" className="content-img"/ >
+                    <img src={hiking} alt="Oahu, Hawaii" className="content-img"/ >
+                     <img src={snowshoe} alt="Elfin Lake, BC" className="content-img"/ >
+            </div>
+            <p className = "Text">
+                To date I have <strong>intergrated some cool outdoor ideas into several apps. Check out my work below!</strong></p>
         </div>
+
         <div className="content">
            <Element name="Work" className = "Sub">
-             Projects
+            | PROJECTS |
            </Element>
+            <div id="content-img-holder" className="Text">
+                    <a href="Coast Capital Savings Online Ordering System">
+                        <img src={cc} alt="coast_capital_savings" className="content-img"/ >
+                    </a>
+                    <a href="BuildDirect Product Comparison Web App">
+                        <img src={hackbd} alt="hackBD" className="content-img"/ >
+                    </a>
+                    <a href="InsTrail Real-time Hiking Popularity App">
+                        <img src={instrail} alt="insTrail" className="content-img"/ >
+                    </a>
+                    <a href="Inukshuk Outdoor Safety Tracking App">
+                        <img src={cc} alt="inukshuk" className="content-img"/>
+                    </a>
+                    <a href="Magic Yelp Maddness - Group Outings Evolved">
+                        <img src="magicyelp.jpg" alt="magicyelp" className="content-img"></img>
+                    </a>
+            </div>
             <p>
-              Magic Yelp Madness (embedded youtube)
+              <Element name="">
+                Magic Yelp Madness (embedded youtube)
+              </Element>
+              <Element name="">
               Inukshuk
+              </Element>
+              <Element>
               InsTrail
+              </Element>
+              <Element>
               BuildDirect Product Comparision system
+              </Element>
+              <Element>
               Coast Capital Savings Online Ordering System
+              </Element>
             </p>
         </div>
     </div>

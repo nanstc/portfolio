@@ -1,11 +1,18 @@
 .App {
 }
 
+.Splash-img-background {
+  background-color: white;
+}
+
 .Splash-img {
   display: flex; 
   align-items: flex-end;
   flex-wrap: wrap;
-  background-color: #42b6f4;
+  background-image: url("images/selfie.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 88%;
   height: 100vh;
   color: white;
 }
@@ -18,7 +25,6 @@
 
 .Navbar {
   display: flex;
-  justify-content: flex-start;
   background-color: #222;
   width: 100%;
   margin-top: auto;
@@ -27,11 +33,17 @@
 }
 
 .Category {
-  flex-direction: row;
+  flex: 0 1 auto; 
   color: white;
   padding-left: 7%;
   margin: 12px;
   font-size: 26px;
+}
+#divider.Category {
+  flex: 30 1 auto;
+}
+.icon { 
+  flex: 1 1 auto;  
 }
 .Sub {
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
@@ -39,18 +51,31 @@
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 20vh;
+  line-height: 4em;
 }
-
 
 .My-story {
   order: 1; 
   flex-grow: 1; 
 }
 
+div#content-img-holder.Text {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.content-img {
+  height: 18em; 
+  width: 18em;
+  flex: 0 0 auto;
+  object-fit: contain;
+  margin: 0.2em;
+}
+
 .content{
-  height: 100vh; /*temporary test for banner float*/
-  padding-left: 2%
+  /*temporary test for banner float*/
+  padding-left: 2%;
+  /*background-color: #f5f5dc;*/
 }
 
 .Work {
@@ -62,9 +87,9 @@
   margin: auto;
   font-size: 18px; 
   font-weight: 500;
-  line-height: 5vh;
+  line-height: 185%;
   padding-right: 10%;
-  padding-bottom: 4vh;
+  padding-bottom: 0.8em;
   width: 75%;
   text-align: justify;
 }
