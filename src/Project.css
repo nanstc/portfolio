@@ -1,0 +1,31 @@
+
+.expanded-project {
+  height: 18em; 
+  width: 18em;
+  flex: 0 0 auto;
+  object-fit: contain;
+  margin: 0.2em;
+  border-left:0.4em soild #4ca6ff;
+  filter: none;
+}
+
+.desc {
+  height: 36em; 
+  width: 36em; 
+  font-size: 20px;
+}
+
+.snippet {
+  background-image: url("images/instrail.png");
+  height: 18em; 
+  width: 18em;
+  flex: 0 0 auto;
+  object-fit: contain;
+  margin: 0.2em;
+  border-left: none;
+  filter: grayscale(80%);
+}
+.snippet:hover{
+  filter:none; 
+  border-left:0.4em soild #4ca6ff; 
+}
