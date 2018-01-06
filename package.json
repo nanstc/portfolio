@@ -2,7 +2,7 @@
   "name": "ncwebsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nanstc.github.io/portfolio",
+  "homepage": "nancystchen.com",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
