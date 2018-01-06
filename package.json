@@ -2,6 +2,7 @@
   "name": "ncwebsite",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://nanstc.github.io/portfolio",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -15,6 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts ejecti",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
