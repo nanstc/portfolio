@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 //import Modal from 'react-modal';
 import Scroll from  'react-scroll';
 import './App.css';
+import Project from './Project.js';
+
 import cc from      './images/coastcapital.png';
 import hackbd from   './images/hackBD.png';
 import instrail from './images/instrail.png';

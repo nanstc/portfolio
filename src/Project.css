@@ -1,7 +1,7 @@
 
-.expanded-project {
+.project-expended {
   height: 18em; 
-  width: 18em;
+  width: 100%;
   flex: 0 0 auto;
   object-fit: contain;
   margin: 0.2em;
@@ -9,9 +9,10 @@
   filter: none;
 }
 
-.desc {
-  height: 36em; 
-  width: 36em; 
+.project-hidden {
+  height: 0em; 
+  width: 0em; 
+  transition: height 300ms 300ms, opacity 300ms 0ms;
   font-size: 20px;
 }
 
