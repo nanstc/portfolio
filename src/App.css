@@ -1,36 +1,47 @@
 .App {
+  display: flex;
+}
+
+.Left_sidebar {
+  display: flex;
+  background-color: #222;
+  width: 10%;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.Content{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.Top {
+  display: flex;
+  height: 100vh; 
+  flex: 8 0 auto;
 }
 
 .Splash-img-background {
   background-color: white;
 }
 
-.Splash-img {
-  display: flex; 
-  align-items: flex-end;
-  flex-wrap: wrap;
-  background-image: url("images/selfie.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 88%;
-  height: 100vh;
+.Top_img{
+  display: flex;
+  background: url("images/selfie.jpg") no-repeat center center;
+  background-size: cover;
+  flex: 2 0 auto;
+  height: 100vh; 
+  width: 65%;
   color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .Quote {
   font-size: 250%;
   padding: 7%;
-  align-self: center;
-}
-
-.Navbar {
-  display: flex;
-  background-color: #222;
-  width: 100%;
-  margin-top: auto;
-  overflow: auto;
-  position: fixed;
-  z-index: 1; 
 }
 
 .Category {
@@ -46,7 +57,10 @@
 .icon { 
   flex: 1 1 auto;  
 }
-.Sub {
+.Intro {
+  margin: 25px;
+}
+.Title {
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -55,9 +69,9 @@
   line-height: 4em;
 }
 
-.My-story {
-  order: 1; 
-  flex-grow: 1; 
+.Intro_text {
+  font-family: 'Helvatica', sans-serif; 
+  font-size: 16px; 
 }
 
 div#content-img-holder.Text {
@@ -75,6 +89,7 @@ div#content-img-holder.Text {
   filter: grayscale(80%);
 }
 .content-img:hover{
+  flex: 0 0 auto;
   filter: none;
   border-left: 0.4em solid #4ca6ff;
 }
@@ -86,12 +101,6 @@ div#content-img-holder.Text {
   margin: 0.2em;
 }
 
-.content{
-  /*temporary test for banner float*/
-  padding-left: 2%;
-  /*background-color: #f5f5dc;*/
-}
-
 .Work {
   order:1; 
   flex-grow:8;
@@ -99,6 +108,7 @@ div#content-img-holder.Text {
 
 #project {
   padding-bottom: 10%;
+  width: 100%;
 }
 
 .Text {
