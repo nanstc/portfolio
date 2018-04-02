@@ -8,23 +8,18 @@ class Project extends Component {
     this.state = {
         clicked: false,
     }
-    this.toggleProjectonClick = this.toggleProjectonClick.bind(this);
+    this.toggleProjectOnClick = this.toggleProjectOnClick.bind(this);
   }
 
-  toggleProjectonClick() {
+  toggleProjectOnClick() {
     this.setState({clicked:!this.state.clicked});
   }
   render() {
     return (
-    <div 
-	className= {`row ${this.state.clicked? 'expanded-project' : 'snippet'}`}
-	onClick={this.toggleProjectonClick}
-	>
-        <img src={img} alt="coast_capital_savings" className="content-img"/ >
-        {this.state.clicked && <div className="desc"></div>}
-    <div>
- 	<p>something</p>
-    </div>
+    <div className="container" onClick={this.toggleProjectOnClick}>
+        <img src={this.props.img} alt="coast_capital_savings" className={'project-img' + (this.state.clicked? ' project-img-clicked' : ' project-img-unclicked')}/>
+        <p className={ 'project-desc ' + (this.state.clicked? 'project-desc-clicked' : 'project-desc-unclicked')}>
+          something</p>
     </div>
     )
   }

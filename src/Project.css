@@ -1,32 +1,54 @@
+/*  
+ * Project container
+ */
 
-.project-expended {
+.container {
+  display: flex;
+  object-fit: contain;
+  margin:0.2em; 
+}
+
+/*
+ * Project Image 
+ */
+
+.project-img {
   height: 18em; 
-  width: 100%;
+  width: 18em;
+  flex: 1 0 auto;
+  object-fit: contain;
+  margin: 0.15em;
+}
+.project-img:hover {
+   border-left: 0.3em solid #bedb9d;
+   filter: none;
+}
+.project-img-unclicked {
+  filter: grayscale(80%);
+}
+
+.project-img-clicked {
+  filter: none;
+}
+
+/* 
+ * Project Description
+ */
+
+.project-desc-clicked {
+  width:80%;
+  display:block;
+}
+.project-desc {
+  filter: none;
   flex: 0 0 auto;
   object-fit: contain;
   margin: 0.2em;
   border-left:0.4em soild #4ca6ff;
   filter: none;
 }
-
-.project-hidden {
-  height: 0em; 
-  width: 0em; 
-  transition: height 300ms 300ms, opacity 300ms 0ms;
-  font-size: 20px;
+.project-desc-unclicked {
+  display:none;
 }
 
-.snippet {
-  background-image: url("images/instrail.png");
-  height: 18em; 
-  width: 18em;
-  flex: 0 0 auto;
-  object-fit: contain;
-  margin: 0.2em;
-  border-left: none;
-  filter: grayscale(80%);
-}
-.snippet:hover{
-  filter:none; 
-  border-left:0.4em soild #4ca6ff; 
-}
+
