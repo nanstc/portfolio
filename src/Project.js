@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Project.css';
 import './App.css';
-import img from './images/hackBD.png';
 
 class Project extends Component {
   constructor(props) {
@@ -22,8 +21,10 @@ class Project extends Component {
         {this.props.title}</div>
       <div className={ (this.state.clicked? 'content-container' : 'content-container-unclicked')}>
         <div className={ 'Text project-desc ' + (this.state.clicked? 'project-desc-clicked' : 'project-desc-unclicked')}>
-         {this.props.desc}</div>
-        <img src={this.props.img} alt="coast_capital_savings" className={'project-img' + (this.state.clicked? ' project-img-clicked' : ' project-img-unclicked')}/>
+           <span></span>
+          <span>{this.props.desc}</span>
+          <span><br/><br/>{this.props.tech}</span></div>
+        <img src={this.props.img} href={this.props.github} alt="coast_capital_savings" className={'project-img' + (this.state.clicked? ' project-img-clicked' : ' project-img-unclicked')}/>
       </div>
     </div>
     )

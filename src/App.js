@@ -4,10 +4,11 @@ import './App.css';
 import Project from './Project.js';
 
 import cc from       './images/coastcapital.png';
-import hackbd from   './images/hackBD.png';
+import yelp from     './images/yelp_multiple.png';
 import instrail from './images/instrail.png';
 import linkedin from './images/ln.png';
 import github from   './images/github.png';
+import tweetmeet from './images/tweetmeet.png';
 import resume from   './images/resume.pdf';
 var Link = Scroll.Link;
 var scroller = Scroll.scroller;
@@ -54,7 +55,6 @@ class App extends Component {
     console.log(this.state.active_tab);
   }
   render() {
-    //const {file} = this.state
     return (
       <div className="App">
         <div className="Left_sidebar">
@@ -96,15 +96,20 @@ class App extends Component {
             <div className="table">
                 <Project img={cc} 
                          title="Online Procurement System"
-                         desc="Course project that is great."></Project>
-                <Project img={hackbd} 
+                         desc="The web application allows users within an organization to place procurement orders to an IT department, and workers tracking and completing the orders. I led a 6-person team to work with sponsors from the Coast Capital Savings’ IT department. The finished enterprise solution includes SSL sign-on, LDAP login and SQL stored procedures designed with the MVP architecture."
+                         tech="Tech stack: React + Java on Spring Boot, SQLServer"></Project>
+                <Project img={tweetmeet} 
                          title="TweetMeet"
-                         desc="Cool Haskell Script"></Project>
-                <Project img={cc} title="Magic Yelp Madness"
-                         desc="freaking topped it"></Project>
+                         desc="The Haskell script conveniently selects tweets based on a handle or hashtag selected by the user. I dealt with Monad to represent states in an immutable language, and had a lot of fun implementing functions to handle I/O, OAuth, Error-handling and JSON parsing."
+                         tech="Tech stack: Haskell"
+                         github="tweetmeet"></Project>
+                <Project img={yelp} title="Magic Yelp Madness"
+                         desc={['An epic bracket war to get the gluttons moving, together. This novel UI allows group members to cast their influence on venue selection. The team evaluated the usability of the UI using cognitive walkthroughs, user stories, and focus groups, and as the team lead I couldn’t be more proud of our final prototype. Watch our demo on ', <a href="https://youtu.be/VZeDvug4YTA">Youtube</a>, '!']}
+                         tech="Tech stack: Axure"></Project>
                 <Project img={instrail}
-                         title="Instrail" 
-                         desc="Hike right now!"></Project>  
+                         title="Instrail"
+                         tech="Tech stack: Ruby, Rails, SQL Lite" 
+                         desc="Rely on this web app to plan out your next hiking adventure! Instrail uses Instagram data to visualize hiking trail check-ins around the Lower Mainland. Users can also visualize their hiking posts on Instagram through our mapping system. I pitched and PM’ed the project from start to finish and worked on the backend infastructure."></Project>  
             </div> 
           </div>
 
@@ -112,7 +117,8 @@ class App extends Component {
             <Element className="Title" style={{"lineHeight": "2em"}}>
               Contact </Element>
             <Element className="Contact_content">
-              <p className="Text"> Want to Chat? Drop me a line here - <a href="mailto:nanstchen@gmail.com">Email</a>. Curious about my work? Check out my <a href="https://www.github.com/nanstc" target="_blank" rel="noopener noreferrer">github</a>. </p></Element>
+              <p className="Text"> Have a cool idea to share with, or just want to say hi? Find me on <a href="https://www.linkedin.com/in/nancystchen/">LinkedIn</a> or drop me a quick line here - <a href="mailto:nanstchen@gmail.com">Email</a>.
+              <br/> Curious about my work? Check out my <a href="https://www.github.com/nanstc" target="_blank" rel="noopener noreferrer">github</a>. </p></Element>
             <Element className="Footer">
               <Element className="Text Footer_content Footer_text">
               © Nancy Chen 2018. </Element></Element>
