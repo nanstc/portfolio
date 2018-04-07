@@ -72,7 +72,9 @@
 
 .Intro_column {
   margin: 25px;
-  width: 35%
+  height: 100vh; 
+  width: 35%;
+  overflow: hidden;
 }
 
 .Intro_content {
@@ -89,16 +91,8 @@
 }
 
 .table {
-  display: flex;
-  flex-flow: column wrap; 
-  justify-content: center;
-  align-items: center;
 }
 
-.row {
-  display: flex;
-  flex-flow: row nowrap; 
-}
 
 /*
  * Contact Section
@@ -153,6 +147,14 @@ a:visited {
   color: #bedb9d; 
 }
 
+a.Sidebar_text:link {
+  color: white;
+}
+
+a.Sidebar_text:visited {
+  color: white;
+}
+
 .Sidebar_icon_style {
   font-size: 38px; 
   color: white;
@@ -165,7 +167,7 @@ a:visited {
 .Title {
   font-family: 'Fira Sans', sans-serif;
   font-size: 48px;
-  line-height: 3em;
+  line-height: 18vh;
   text-align: center;
 }
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import ReactPDF from 'react-pdf';
 import Scroll from  'react-scroll';
 import './App.css';
 import Project from './Project.js';
 
-import cc from      './images/coastcapital.png';
+import cc from       './images/coastcapital.png';
 import hackbd from   './images/hackBD.png';
 import instrail from './images/instrail.png';
 import linkedin from './images/ln.png';
 import github from   './images/github.png';
+import resume from   './images/resume.pdf';
 var Link = Scroll.Link;
 var scroller = Scroll.scroller;
 var Element = Scroll.Element;
@@ -64,7 +64,7 @@ class App extends Component {
             PROJECTS </Link>
           <Link className={"Sidebar_text Sidebar_tab " + ((this.state.active_tab === 'contact')? "Sidebar_tab_active": "Sidebar_tab_inactive") } onClick={(e) => this.handleClick('contact')} activeClass="active" to="contact" spy={true} smooth={true} duration={400} >
             CONTACT </Link>
-          <a className="Sidebar_text Sidebar_tab Sidebar_tab_inactive" target="_blank">RESUME </a>
+          <a className="Sidebar_text Sidebar_tab Sidebar_tab_inactive" href={resume} target="_blank">RESUME </a>
           <div className="Sidebar_icon_container">
             <a href="https://www.linkedin.com/in/nancystchen/" target="_blank" rel="noopener noreferrer" className="Sidebar_icon">
               <img src={linkedin} alt="linkedin"/></a>
@@ -94,16 +94,17 @@ class App extends Component {
           <div className="Project" id="project">
             <Element className="Title"> Projects </Element>
             <div className="table">
-              <div className="row"> 
-                <Project img={cc}></Project>
-                <Project img={hackbd}></Project>
-                <Project img={hackbd}></Project>
-              </div>
-              <div className="row">
-                <Project img={instrail}></Project>
-                <Project img={cc}></Project>
-                <Project img={instrail}></Project>  
-              </div>
+                <Project img={cc} 
+                         title="Online Procurement System"
+                         desc="Course project that is great."></Project>
+                <Project img={hackbd} 
+                         title="TweetMeet"
+                         desc="Cool Haskell Script"></Project>
+                <Project img={cc} title="Magic Yelp Madness"
+                         desc="freaking topped it"></Project>
+                <Project img={instrail}
+                         title="Instrail" 
+                         desc="Hike right now!"></Project>  
             </div> 
           </div>
 
@@ -111,7 +112,7 @@ class App extends Component {
             <Element className="Title" style={{"lineHeight": "2em"}}>
               Contact </Element>
             <Element className="Contact_content">
-              <p className="Text"> Want to Chat? Drop me a line here <a href="mailto:nanstchen@gmail.com">Email</a>. Curious about my work? Check out my <a href="https://www.github.com/nanstc" target="_blank" rel="noopener noreferrer">github</a> </p></Element>
+              <p className="Text"> Want to Chat? Drop me a line here - <a href="mailto:nanstchen@gmail.com">Email</a>. Curious about my work? Check out my <a href="https://www.github.com/nanstc" target="_blank" rel="noopener noreferrer">github</a>. </p></Element>
             <Element className="Footer">
               <Element className="Text Footer_content Footer_text">
               © Nancy Chen 2018. </Element></Element>

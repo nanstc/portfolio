@@ -1,13 +1,11 @@
 {
-  "main.css": "static/css/main.056bedd7.css",
-  "main.css.map": "static/css/main.056bedd7.css.map",
-  "main.js": "static/js/main.957dd6c8.js",
-  "main.js.map": "static/js/main.957dd6c8.js.map",
+  "main.css": "static/css/main.c2e9fadf.css",
+  "main.css.map": "static/css/main.c2e9fadf.css.map",
+  "main.js": "static/js/main.ff593085.js",
+  "main.js.map": "static/js/main.ff593085.js.map",
   "static/media/coastcapital.png": "static/media/coastcapital.88bba29f.png",
   "static/media/hackBD.png": "static/media/hackBD.89f5ad22.png",
   "static/media/instrail.png": "static/media/instrail.972fe99e.png",
-  "static/media/p_hiking.jpg": "static/media/p_hiking.cb991c70.jpg",
-  "static/media/p_snowshoeing.jpg": "static/media/p_snowshoeing.8eaab3fd.jpg",
-  "static/media/p_withbird.jpg": "static/media/p_withbird.0214dc2a.jpg",
-  "static/media/selfie.jpg": "static/media/selfie.30882366.jpg"
+  "static/media/resume.pdf": "static/media/resume.6be30767.pdf",
+  "static/media/selfie.jpg": "static/media/selfie.744c6a65.jpg"
 }
