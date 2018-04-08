@@ -3,84 +3,97 @@
  */
 
 .container {
+  background-color: #f1f7e9;
   color: #222;
   object-fit: contain;
-  background-color: #f1f7e9;
+  -o-object-fit: contain;
+  position: relative;
 }
 .container:hover {
   background-color: #ddefc8; 
 }
 /*
-.container:hover {
-  font-size: 1.1em;
+ * Project chevron
+ */
+
+@-webkit-keyframes slide-down {
+  from {top: 1.2em;}
+  to {top: 2em;}
 }
 
-.container:before {
-  -webkit-transition:0.5s all ease;
-  transition:0.5s all ease;
-  position:relative;
-  top:0;
-  left:50%;
-  right:50%;
-  bottom:0;
-  opacity:0;
-  content: '';
-  background-color:#cce2b1;
-  z-index:0;
-  display:block;
-  width:5vw;
+@keyframes slide-down {
+  from {top: 1.2em;}
+  to {top: 1.7em;}
 }
 
-.container:hover:before {
-  left: 0;
-  right: 0;
-  opacity: 1;
+@-webkit-keyframes slide-up {
+  from {top: 1.5em;}
+  to   {top: 0.7em;}
 }
 
-*/
+@keyframes slide-up {
+  from {top: 1.5em;}
+  to   {top: 0.7em;}
+}
+
+.project-title:hover .fa-angle-up {
+  -webkit-animation: slide-up 1.5s 1;
+  animation: slide-up 1.5s 1;
+}
+.project-title:hover .fa-angle-down {
+  -webkit-animation: slide-down 1.5s 1;
+  animation: slide-down 1.5s 1;
+}
 /*
  * Project Image 
  */
 
 .project-img {
   border-radius: 3px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   max-height: 16em; 
   max-width: 25em;
   margin: 2vw;
+  -o-object-fit: contain;
   object-fit: contain;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*
  * Project Title 
  */
-.project-title-unclicked {
+.project-title {
   font-family: 'Fira Sans', sans-serif; 
-  font-size: 3.5vw; 
+  font-size: 3vw; 
   line-height:3.5em;
   text-align:center; 
   cursor: pointer;
 }
 .project-title-clicked {
-  display:flex;
-  font-size:3vh;
-  margin: 0 auto; 
-  align-self: center;
-  background-color:#ddefc8;
+  background-color: #ddefc8;
 }
 /* 
  * Project Description
  */
 .content-container {
   background-color:white;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   opacity:1; 
   height: auto;
-  -webkit-transition:;
-  transition:; /*TODO*/
+  -webkit-transition: opacity 400ms linear, height 400ms linear;
+  transition: opacity 400ms linear, height 400ms linear;
 }
 .content-container-unclicked {
-  display:none;
+  opacity: 0;
+  height: 0; 
+  overflow: hidden;
+  -o-transition: opacity 400ms linear, height 400ms linear;
+  -webkit-transition: opacity 400ms linear, height 400ms linear; 
+  transition: opacity 400ms linear, height 400ms linear;
 }
 .project-desc {
   width: 82%;
@@ -89,7 +102,7 @@
   margin-left: 2em;
   margin-right: 2em;
   margin-bottom: 3em;
-  font-size: 2.4vh;
+  font-size: 2.5vh;
   line-height: 4.5vh;
   text-align: justify;
   overflow: scroll;

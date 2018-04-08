@@ -1,4 +1,6 @@
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 /*
@@ -7,29 +9,50 @@
 
 .Left_sidebar {
   background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
+  -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
   width:15%;
-  top: 0; 
+  top: 0;
+  position: -webkit-sticky;
   position: sticky;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .Sidebar_tab {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  margin: 15% auto; 
+  margin: 15% auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center; 
   justify-content: center;
   top: 0;  
 }
 
 .Sidebar_icon_container {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex; 
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 36%;
 }
 .Sidebar_icon {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center; 
   margin: 8%;
   opacity: 0.5;
@@ -39,8 +62,11 @@
  */
 
 .Content{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap:wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 85%;
 }
 
@@ -52,10 +78,14 @@
 }
 
 .Intro_img{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: url("images/selfie.jpg") no-repeat center center;
   background-size: cover;
-  flex: 2 0 auto;
+  -webkit-box-flex: 2;
+    -ms-flex: 2 0 auto;
+        flex: 2 0 auto;
   height: 100vh; 
   width: 65%;
   color: white;
@@ -74,7 +104,7 @@
   margin: 25px;
   height: 100vh; 
   width: 35%;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .Intro_content {
@@ -87,7 +117,9 @@
 
 .Project {
   width:100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .table {
@@ -110,15 +142,21 @@
  * Footer Section
  */
 .Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 3vh;
   background-color: #bedb9d; 
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+    -ms-flex-pack: end;
+      justify-content: flex-end;
   margin-top:1.5vw;
 }
 
 .Footer_content {
-  flex: 1 0 auto; 
+  -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto; 
   padding-right:3%; 
 }
 /*

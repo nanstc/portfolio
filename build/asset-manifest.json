@@ -1,11 +1,12 @@
 {
-  "main.css": "static/css/main.c2e9fadf.css",
-  "main.css.map": "static/css/main.c2e9fadf.css.map",
-  "main.js": "static/js/main.ff593085.js",
-  "main.js.map": "static/js/main.ff593085.js.map",
+  "main.css": "static/css/main.d65983f3.css",
+  "main.css.map": "static/css/main.d65983f3.css.map",
+  "main.js": "static/js/main.2a6ea253.js",
+  "main.js.map": "static/js/main.2a6ea253.js.map",
   "static/media/coastcapital.png": "static/media/coastcapital.88bba29f.png",
-  "static/media/hackBD.png": "static/media/hackBD.89f5ad22.png",
-  "static/media/instrail.png": "static/media/instrail.972fe99e.png",
+  "static/media/instrail.png": "static/media/instrail.4fc6276f.png",
   "static/media/resume.pdf": "static/media/resume.6be30767.pdf",
-  "static/media/selfie.jpg": "static/media/selfie.744c6a65.jpg"
+  "static/media/selfie.jpg": "static/media/selfie.744c6a65.jpg",
+  "static/media/tweetmeet.png": "static/media/tweetmeet.8d972180.png",
+  "static/media/yelp_multiple.png": "static/media/yelp_multiple.4317a501.png"
 }

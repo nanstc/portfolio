@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Scroll from  'react-scroll';
 import './App.css';
 import Project from './Project.js';

@@ -17,8 +17,10 @@ class Project extends Component {
   render() {
     return (
     <div className="container" onClick={this.toggleProjectOnClick}>
-      <div className={'Title project-title-unclicked'}> 
-        {this.props.title}</div>
+      <div className={'Title project-title ' + (this.state.clicked? 'project-title-clicked': 'project-title-unclicked')}> 
+        {this.props.title}
+        <i className={(this.state.clicked? 'fa fa-angle-up' : 'fa fa-angle-down')} style={{'position':'absolute', 'right':'10%', 'top':'1.2em'}}></i>
+      </div>
       <div className={ (this.state.clicked? 'content-container' : 'content-container-unclicked')}>
         <div className={ 'Text project-desc ' + (this.state.clicked? 'project-desc-clicked' : 'project-desc-unclicked')}>
            <span></span>
