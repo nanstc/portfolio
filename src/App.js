@@ -85,7 +85,7 @@ class App extends Component {
                   Nancy Chen </Element>
                 <Element className="Text">
                   <p>Hello and welcome!</p>
-                    <p>I'm a recent Computer Science graduate passionate about using my skills to solve real-wrold problems. I've done it with web-app, mobile, pen-and-paper prototypes, and now trying to get my hands dirty with embedded systems. I've been a long-time big fan of: teamwork, cool tech, and <a href="https://www.allaboutbirds.org/guide/Swainsons_Thrush/overview">Swainson's Trush</a>.</p>
+                    <p>I'm a recent Computer Science graduate passionate about using my skills to solve real-wrold problems. I've done it with web-app, mobile, pen-and-paper prototypes, and now working my way through frontend-land while looking for a job. I've been a long-term big fan of teamwork, cool tech, and <a href="https://www.allaboutbirds.org/guide/Swainsons_Thrush/overview">Swainson's Thrush</a>.</p>
                     <p>Cross-breeding CS solutions with ecology enigmas is my dream, and I work hard to prepare for the day I realize it.</p> </Element>
               </div>
             </div>
